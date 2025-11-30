@@ -1,0 +1,205 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(0, 109, 5);;
+}
+
+.menu{
+    background-color: rgb(23, 23, 189);
+}
+
+.game-board {
+    width: 100%;
+    border-bottom: 5px solid rgb(0, 82, 11);
+    height: 600px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+    background-image: linear-gradient(180deg, rgb(16, 147, 255), rgb(187, 232, 255));
+}
+
+.sonic{
+    width: 100px;
+    position: absolute;
+    bottom: -1.5px;
+    background-size: cover;
+}
+
+.cacto{
+    width: 60px;
+    position: absolute;
+    bottom: 0;
+    background-size: cover;
+    animation: cacto-animation 2s linear infinite;
+}
+
+.pássaro{
+    width: 50px;
+    transform: scaleX(-1);
+    position: absolute;
+    top: 66%;
+    animation: pássaroo-animation  1.07s linear infinite;
+}
+.nuvens{
+    width: 200px;
+    bottom: 420px;
+    position: absolute;
+    opacity: 70%;
+    animation: nuvens-animation 25s linear infinite;
+}
+
+.pulo{
+    animation: pulo 400ms ease-out;
+}
+
+.mario{
+    width: 60px;
+    transform: scaleX(-1);
+    position: absolute;
+    bottom: 0;
+    background-size: cover;
+    animation: mario-animation 1.15s linear infinite;
+}
+
+a{
+    color: rgb(0, 0, 0);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    background-color: rgb(255, 255, 255);
+    width: 50px;
+    padding: 5px 50px;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+a:hover{
+    background-color: rgb(224, 224, 224);
+}
+
+.game-over {
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.322);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+@keyframes nuvens-animation{
+    
+    from{
+     
+        right: -200px;
+    
+       
+    }
+
+
+    to{
+     
+        right: 1400px;
+    
+    }
+}
+
+
+@keyframes pássaroa-animation{
+    
+    0%{
+        top: 66%;  
+    }
+        
+        50%{ 
+            top: 68%;
+    }
+
+    100%{
+        top: 66%;
+    }
+
+
+}
+
+@keyframes pássaroo-animation{
+    
+    from{
+     
+        right: -40px;
+    
+       
+    }
+
+
+    to{
+     
+        right: 1400px;
+    
+    }
+}
+
+
+
+@keyframes mario-animation{
+    
+    from{
+     
+        right: -40px;
+    
+       
+    }
+
+
+    to{
+     
+        right: 1400px;
+    
+    }
+}
+
+
+@keyframes cacto-animation{
+    
+    from{
+     
+        right: -40px;
+    
+       
+    }
+
+
+    to{
+     
+        right: 1400px;
+    
+    }
+}
+
+
+@keyframes pulo{
+    
+    0%{
+        bottom: 0;  
+    }
+
+    40%{  
+        bottom: 18%;    
+    }
+    
+    50%{ 
+        bottom: 18%;
+    }
+
+    100%{
+        bottom: 0;
+    }
+
+
+}
